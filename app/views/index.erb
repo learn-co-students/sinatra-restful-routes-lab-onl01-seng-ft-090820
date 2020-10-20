@@ -1,0 +1,5 @@
+<h2>Welcome to Your Recipe Book</h2>
+<h3>Here is a list of all your recipes:</h3>
+<% @recipes.each do |r| %>
+<a href="/recipes/<%= r.id %>"><%= r.name %></a>
+<% end %>
