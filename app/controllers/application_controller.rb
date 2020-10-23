@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   
   post '/recipes' do 
     @recipes = Recipe.create(name: params[:name],
-      ingredients: params[:ingredients]
+      ingredients: params[:ingredients],
       cook_time: params[:cook_time]).tap do |recipe|
         recipe.save
         redirect to "/recipes/#{@recipe.id}"
@@ -52,4 +52,4 @@ class ApplicationController < Sinatra::Base
     redirect '/recipes'
   end 
 
-end
+end 
