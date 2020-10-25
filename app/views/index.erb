@@ -1,0 +1,12 @@
+<h1>All Recipes</h1>
+<% @recipes.each do |recipe|%>
+    <h2><%= recipe.name %></h2>
+    <p><%= recipe.ingredients %></p>
+    <p><%= recipe.cook_time %></p>
+    <form method="GET" action="/recipes/:id">
+    <input type="submit" value="See this recipe">
+    </form>
+<% end%>
+<form method="GET" action="/recipes/new">
+<input type="submit" value="Add New Recipe">
+</form>
