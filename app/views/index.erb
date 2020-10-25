@@ -3,9 +3,8 @@
     <h2><%= recipe.name %></h2>
     <p><%= recipe.ingredients %></p>
     <p><%= recipe.cook_time %></p>
-    <form method="GET" action="/recipes/:id">
-    <input type="submit" value="See this recipe">
-    </form>
+    binding.pry
+    <a href="/recipes/<%= recipe.id %>">See recipe</a>
 <% end%>
 <form method="GET" action="/recipes/new">
 <input type="submit" value="Add New Recipe">
